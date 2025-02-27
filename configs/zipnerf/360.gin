@@ -4,19 +4,19 @@ Config.far = 1e6
 Config.factor = 4
 
 # Originally we trained on 8 V100s with these parameters:
-# Config.max_steps = 25000
-# Config.batch_size = 65536
-# Config.lr_delay_steps = 2500
-# Config.lr_init = 0.01
-# Config.lr_final = 0.001
+Config.max_steps = 25000
+Config.batch_size = 65536
+Config.lr_delay_steps = 2500
+Config.lr_init = 0.01
+Config.lr_final = 0.001
 
 # But to allow this code to run on a single just-okay GPU, we've divided the
 # batch size and learning rates by 8x and multiplied the number of steps by 8x.
-Config.max_steps = 200000
-Config.batch_size = 8192
-Config.lr_delay_steps = 20000
-Config.lr_init = 0.00125
-Config.lr_final = 0.000125
+# Config.max_steps = 200000
+# Config.batch_size = 8192
+# Config.lr_delay_steps = 20000
+# Config.lr_init = 0.00125
+# Config.lr_final = 0.000125
 
 Config.lr_delay_mult = 1e-8
 Config.adam_beta1 = 0.9

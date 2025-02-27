@@ -111,7 +111,8 @@ def main(unused_argv):
   )
   path_fn = lambda x: path.join(out_dir, x)
 
-  if not config.eval_only_once:
+  # if not config.eval_only_once:
+  if True:
     summary_writer = tensorboard.SummaryWriter(
         path.join(config.checkpoint_dir, 'eval')
     )
